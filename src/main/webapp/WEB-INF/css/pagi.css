@@ -1,0 +1,17 @@
+.pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.deleteAll {
+    display: flex;
+    justify-content: end;
+}
