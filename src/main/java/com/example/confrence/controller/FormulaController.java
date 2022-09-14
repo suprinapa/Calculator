@@ -1,12 +1,11 @@
 package com.example.confrence.controller;
 
 import com.example.confrence.domain.Formula;
+import com.example.confrence.dto.FormulaResponseData;
 import com.example.confrence.service.FormulaService;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.servlet.ModelAndView;
-
+import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
@@ -18,10 +17,12 @@ public class FormulaController {
     }
 
     @GetMapping("formula")
-    public ModelAndView getAllData(@ModelAttribute("formula") Formula formula) {
-        ModelAndView modelAndView = new ModelAndView("calculator");
-        List<Formula> allFormulasList = formulaService.findAllFormulas();
-        modelAndView.addObject("allFormulaList", allFormulasList);
-        return modelAndView;
+    @ResponseStatus(HttpStatus.OK)
+    public @ResponseBody
+    FormulaResponseData getAllData(@ModelAttribute("formula") Formula formula) {
+        FormulaResponseData formulaResponseData = new FormulaResponseData();
+        formulaResponseData.setData(formulaService.findAllFormulas());
+        return formulaResponseData;
+
     }
     }

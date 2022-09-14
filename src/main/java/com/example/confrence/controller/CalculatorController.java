@@ -2,6 +2,7 @@ package com.example.confrence.controller;
 
 import com.example.confrence.domain.History;
 import com.example.confrence.domain.MathExpression;
+import com.example.confrence.dto.FormulaResponseData;
 import com.example.confrence.repository.HistoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,6 +12,9 @@ import com.example.confrence.service.Calculator;
 
 @Controller
 public class CalculatorController {
+
+    @Autowired
+    FormulaResponseData formulaResponseData;
 
     @Autowired
     Calculator calculatorService;
