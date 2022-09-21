@@ -20,4 +20,10 @@ public class FormulaImpl implements FormulaService {
     public List<Formula> findAllFormulas() {
         return formulaRepository.findAll();
     }
+
+    @Override
+    public void addFormula(Formula formula) {
+        formulaRepository.save(formula);
+    }
+
 }

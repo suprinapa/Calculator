@@ -8,6 +8,6 @@ import java.util.List;
 public interface FormulaService {
 
 List<Formula> findAllFormulas();
-
+void addFormula(Formula formula);
 }
 

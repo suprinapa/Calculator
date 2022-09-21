@@ -23,6 +23,11 @@ public class FormulaController {
         FormulaResponseData formulaResponseData = new FormulaResponseData();
         formulaResponseData.setData(formulaService.findAllFormulas());
         return formulaResponseData;
+    }
 
+    @PostMapping("formula/addFormula")
+    public String addFormula(Formula formula){
+        formulaService.addFormula(formula);
+        return ("addFormula");
     }
     }

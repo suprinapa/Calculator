@@ -147,6 +147,9 @@ div.equal:active {
 #popup-close{
 
 }
+#formula{
+    display: none;
+}
 
 .btn_custom {
     display: inline-block;
@@ -172,4 +175,12 @@ div.equal:active {
     color: #fff;
     background-color: #807a7a;
     border-color: #807a7a;
+}
+.textArea{
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    width: 100px;
+    height: 30px;
+    overflow: hidden;
+    float: right;
 }
